@@ -18,10 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt = $conn->prepare("INSERT INTO usuarios (nombre, contrasena, email) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $username, $hashed_password, $email);
         if ($stmt->execute()) {
-            echo "Usuario registrado exitosamente";
+            echo "<script>alert('Usuario registrado exitosamente');</script>";
             header("refresh:1;url=index.php");
         } else {
-            echo "Error al registrar usuario";
+            echo "<script>alert('Error al registrar usuario');document.location.href = 'index.php';</script>";
         }
     }
 }

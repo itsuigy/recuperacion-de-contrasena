@@ -1,12 +1,3 @@
-<?php
-session_start();
-
-if (!isset($_SESSION['user']) || empty($_SESSION['user'])) {
-    header('Location: index.php');
-    exit;
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,10 +26,10 @@ if (!isset($_SESSION['user']) || empty($_SESSION['user'])) {
 
 <body class="bg-gray-100">
     <div class="container mx-auto px-4 py-40">
-        <h1 class="text-4xl font-bold mb-4 text-center">¡Bienvenido a nuestro sitio web!</h1>
-        <p class="text-lg text-center">Gracias por iniciar sesión. ¡Disfruta tu estancia!</p>
+        <h1 class="text-4xl font-bold mb-4 text-center">El link ha caducado o se ingreso erróneamente.</h1>
+        <p class="text-lg text-center">Por favor, vuelve a intentarlo.</p>
         <div class="flex justify-center">
-            <button onclick="location.href='logout.php'" class="mt-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Cerrar sesión</button>
+            <button onclick="location.href='index.php'" class="mt-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Volver</button>
         </div>
     </div>
 </body>

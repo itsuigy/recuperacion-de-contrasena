@@ -24,9 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: inicio.php");
             exit();
         } else {
-            echo "Usuario o contraseña incorrectos";
+            echo "<script>alert('Usuario o contraseña incorrectos');document.location.href = 'index.php';</script>";
         }
     } else {
-        echo "Usuario o contraseña incorrectos";
+        echo "<script>alert('Usuario o contraseña incorrectos');document.location.href = 'index.php';</script>";
     }
 }
